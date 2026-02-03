@@ -1,0 +1,9 @@
+---
+---
+<!DOCTYPE html>
+<html>
+<body>
+  {% include header.html %}
+  <p>テストページの本文です。</p>
+</body>
+</html>

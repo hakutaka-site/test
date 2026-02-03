@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>ボタン</title>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="index.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<style>
+/* ◆ wrapper  */
+.wrapper {
+   width: auto;					/* 横幅 */
+   margin: 0px;					/*  */
+   padding: 0px;				/* パディング（上下左右） */
+}
+
+/* タブレット以上に適用するCSS */
+@media screen and ( min-width:1000px )
+{
+.wrapper {
+   margin: 0 auto;				/*  */
+   padding-top: 0px;				/* パディング（上下左右） */
+}
+}
+
+/* ◆ wrapper 各背景色ごとのセクション（黒背景）  */
+.style-black-wrapper {
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+}
+
+/* ◆ wrapper 各背景色ごとのセクション（白背景）  */
+.style-white-wrapper {
+  background-color: #fff;
+  color: #000;
+  width: 100%;
+}
+
+/* ◆ 共通項目：中の箱の幅を制限して中央に寄せる */
+.style-black-content {
+  min-height: 500px;
+  padding: 10px 30px;
+}
+
+/* タブレット以上に適用するCSS */
+@media screen and (min-width: 1000px) {
+  .style-black-content {
+    max-width: 1000px;
+    margin: 0 auto;    /* これで中央に寄る */
+    padding: 30px 0;   /* 左右パディングは0でも、max-widthとmarginで調整される */
+  }
+}
+
+/* ◆ wrapper （黒背景）用リンク色など  */
+/* 黒背景エリア専用のスタイル（クラス名の中のaタグに指定） */
+.section-black a {
+  color: #ff0; /* 黒背景の中のリンクだけ「黄色」にする */
+  text-decoration: underline;
+}
+
+.section-black h2 {
+  border-bottom: 2px solid #fff; /* 黒背景の中の見出しにだけ「白線」を引く */
+}
+
+/* ◆ wrapper （白背景）用リンク色など  */
+/* 白背景エリア専用のスタイル */
+.section-white a {
+  color: #0000ee; /* 白背景の中のリンクは「標準的な青」にする */
+}
+</style>
+</head>
+<body>
+背景色用とコンテンツ用を分けることでレイアウト崩れの防止
+<div class="wrapper">
+<main>
+<div class="style-black-wrapper">
+<div class="style-black-content">div_b</div>
+</div>
+<div class="style-white-wrapper">
+<div class="style-black-content">div_w</div>
+</div>
+<div class="style-black-wrapper">
+<div class="style-black-content">div_b</div>
+</div>
+<div class="style-white-wrapper">
+<div class="style-black-content">div_w</div>
+</div>
+</main>
+</div>
+</body>
+</html>
